@@ -1,4 +1,5 @@
-**C++ Project - Old Maid card game
+**C++ Project - Old Maid card game**
+
 Kim Taehyun 3035751330
 Jung Hyeonwoo 3035829948
 
