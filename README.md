@@ -1,10 +1,9 @@
 **C++ Project - Old Maid card game**
 
 Kim Taehyun 3035751330
-
 Jung Hyeonwoo 3035829948
 
-Identify a game: Old maid card game**
+**Identify a game: Old maid card game**
 
 **Description of the Game**
 
