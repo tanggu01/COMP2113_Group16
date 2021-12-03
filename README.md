@@ -23,12 +23,10 @@ In this game, one player will match with one computer player. To win this game, 
 A list of features that you plan to implement, and explain how each coding element 1 to 5 listed under the coding requirements aforementioned supports your features.
 
 * Have an vector that stores 53 cards.(vector<string> deck) 
-* Randomly distribute 53 cards to the player (vector<string> player) and the computer(vector<string> computer) including 1 joker card from the vector by using shuffle_deck function (Requirement 1).  
-* Use vector to store each player’s cards. (requirement 2). 
-* Function that resizes arraylist (requirement 3). 
-* Function that makes each turn a player takes one card from another player. It removes the card from the player’s arraylist and adds it to another player’s vector.(requirement 2,3).  
-* Function that if any player has a pair of cards with the same card number and same color, it will automatically discard those two cards from each player’s deck, and then resize arraylist accordingly using the function (requirement 2).  
-* File input and outputs for loading and saving game status (requirement 4). 
+* Function (in shuffledeck.cpp) that randomly distribute 53 cards to the player (vector<string> player) and the computer(vector<string> computer) including 1 joker card from the vector by using shuffle_deck function (Requirement 1).  
+* Use vector to store each player’s cards. (requirement 2 & 3). 
+* Function (in pickcard.cpp) that makes each turn a player takes one card from another player. It removes the card from the player’s vector and adds it to another player’s vector. If any player has a pair of cards with the same card number and same color, it will automatically discard those two cards from each player’s deck (requirement 2,3).  
+* File input and outputs for loading and saving game status (savegame.cpp) (requirement 4). 
 * Store functions in different files (requirement 5).  
 
 
