@@ -7,7 +7,7 @@ Jung Hyeonwoo 3035829948
 
 **Description of the Game**
 
-In this game, one player will match with one computer player. To win this game, the player should discard cards from their deck more quickly than the computer by pairing the cards. The player will receive one more additional card than the computer since the total number of cards are odd. As there is only one Joker card, it cannot be discarded. A player should wait for the computer to take a Joker card or be careful not to take a Joker card from the computer's deck. 
+In this game, one player will match with one computer player. To win this game, the player should discard cards from their deck more quickly than the computer by pairing the cards. The player will receive one more additional card than the computer since the total number of cards are odd. As there is only one Joker card, it cannot be discarded. A player should wait for the computer to take a Joker card or be careful not to take a Joker card from the computer's deck. The player wins when the player's deck becomes 0. Otherwise, when computer's deck becomes 0, the computer wins and player will lose the game. 
 
 **Game Rules**
 1. Use 52 normal cards and one Joker card for the game. Total 53 cards 
@@ -25,11 +25,13 @@ A list of features that you plan to implement, and explain how each coding eleme
 * Have an vector that stores 53 cards.(vector<string> deck) 
 * Function (in shuffledeck.cpp) that randomly distribute 53 cards to the player (vector<string> player) and the computer(vector<string> computer) including 1 joker card from the vector by using shuffle_deck function (Requirement 1).  
 * Use vector to store each player’s cards. (requirement 2 & 3). 
-* Function (in pickcard.cpp) that makes each turn a player takes one card from another player. It removes the card from the player’s vector and adds it to another player’s vector. If any player has a pair of cards with the same card number and same color, it will automatically discard those two cards from each player’s deck (requirement 2,3).  
-* File input and outputs for loading and saving game status (savegame.cpp) (requirement 4). 
+* Function (in initializedeck.cpp) automatilcally discards all the cards which can be paired inside computer's and player's deck respectively. 
+* Function (in pickcard.cpp) that makes each turn a player takes one card from another player. It removes the card from the player’s vector and adds it to another player’s vector. If any player has a pair of cards with the same card number and same color, it will automatically discard those two cards from each player’s deck (requirement 2,3). 
+* Function (in savegame.cpp) saves current player's and computer's deck status to each .txt file when player want to save the game. (player's deck to p1.txt, computer's deck to p2.txt) (requirement 4).
+* Function (in importgame.cpp) loads the player's and computer's deck status to current game. load p1.txt file to player's vector and p2.txt file to computer's vector. The game will be automatically resumed when there are any saved file. (requirement 4)
 * Store functions in different files (requirement 5).  
 
-
-To run the game:
-make main
-./main
+**To run the Game**
+type: 
+  make main
+  ./main
