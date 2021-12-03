@@ -34,11 +34,9 @@ A list of features that you plan to implement, and explain how each coding eleme
 * Store functions in different files (requirement 5).    
 
 
-**To run the Game**  
-  type:  
-  make main  
-  ./main  
+**To run the Game first time (including compliation)**  
+* make main  
+* ./main    
   
-type:   
-  make main  
-./main  
+**To run the Game after the first time**  
+* ./main    
