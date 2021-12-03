@@ -44,7 +44,64 @@ void pick_card_user(vector<string> &p1, vector <string> &p2) { //For player
     cout << endl;
 
     //Step 4: Remove pairs
+    cout << "Finding pairs..." << endl;
+    int pair_num; //the selected card number
+    char pair_shape; //the selected card shape
+    string new_card, current_card;
     
+    new_card=p1.at(n_dest-1); //get the shape and number of the new card
+    
+    //if the shape of the new card is 'C' the shape of pair should be 'S'
+    if (new_card[0]=='C'){
+        pair_shape='S';
+        pair_num=p1[n_dest-1][1]*10+p1[n_dest-1][2]; 
+    }
+    
+    //if the shape of the new card is 'S' the shape of pair should be 'C'
+    else if (new_card[0]=='S'){
+        pair_shape='C';
+        pair_num=p1[n_dest-1][1]*10+p1[n_dest-1][2]; 
+    }
+    
+    //if the shape of the new card is 'H' the shape of pair should be 'D'
+    else if (new_card[0]=='H'){
+        pair_shape='D';
+        pair_num=p1[n_dest-1][1]*10+p1[n_dest-1][2]; 
+    }
+    
+    //if the shape of the new card is 'D' the shape of pair should be 'H'
+    else if (new_card[0]=='D'){
+        pair_shape='H';
+        pair_num=p1[n_dest-1][1]*10+p1[n_dest-1][2]; 
+    }
+    //if the card is 'J' no pair can be made
+    else {
+      pair_shape = 'J';
+      pair_num = 0;
+    }
+
+    //scan the current deck whether there is corresponding card which is paired with new card
+    for (int i=0; i<p1.size(); ++i){
+        current_card=p1.at(i);
+        //if there is corresponding card, discard from the current deck
+        if (current_card[0]==pair_shape && current_card[1]*10+current_card[2]==pair_num){
+            if (i>(n_dest-1)){
+                p1.erase(p1.begin()+(i));
+                p1.erase(p1.begin()+(n_dest-1));
+            }
+            else if (i<(n_dest-1)){
+                p1.erase(p1.begin()+(n_dest-1));
+                p1.erase(p1.begin()+(i));
+            }
+        }
+    }
+
+    cout << "After finding pairs : you have " << p1.size() << " cards in your hand " << endl;
+    cout << "Your current deck after removing pairs is: " << endl;
+    for (int i=0; i< p1.size(); i++) {
+        cout << p1[i] << " ";
+    }
+    cout << endl;
 }
 
 //Function to pick card & remove pairs for player
@@ -64,5 +121,63 @@ void pick_card_computer(vector<string> &p1, vector <string> &p2) { //For compute
     p1.erase(p1.begin() + (n-1));
  
     //Step 4: Remove pairs
+    cout << "Computer is removing pairs..." << endl;
+
+    int pair_num; //the selected card number
+    char pair_shape; //the selected card shape
+    string new_card, current_card;
     
+    new_card=p2.at(n_dest-1); //get the shape and number of the new card
+    
+    //if the shape of the new card is 'C' the shape of pair should be 'S'
+    if (new_card[0]=='C'){
+        pair_shape='S';
+        pair_num=p2[n_dest-1][1]*10+p2[n_dest-1][2]; 
+    }
+    
+    //if the shape of the new card is 'S' the shape of pair should be 'C'
+    else if (new_card[0]=='S'){
+        pair_shape='C';
+        pair_num=p2[n_dest-1][1]*10+p2[n_dest-1][2]; 
+    }
+    
+    //if the shape of the new card is 'H' the shape of pair should be 'D'
+    else if (new_card[0]=='H'){
+        pair_shape='D';
+        pair_num=p2[n_dest-1][1]*10+p2[n_dest-1][2]; 
+    }
+    
+    //if the shape of the new card is 'D' the shape of pair should be 'H'
+    else if (new_card[0]=='D'){
+        pair_shape='H';
+        pair_num=p2[n_dest-1][1]*10+p2[n_dest-1][2]; 
+    }
+    //if the card is 'J' no pair can be made
+    else {
+      pair_shape = 'J';
+      pair_num = 0;
+    }
+
+    //scan the current deck whether there is corresponding card which is paired with new card
+    for (int i=0; i<p2.size(); ++i){
+        current_card=p2.at(i);
+        //if there is corresponding card, discard from the current deck
+        if (current_card[0]==pair_shape && current_card[1]*10+current_card[2]==pair_num){
+            if (i>(n_dest-1)){
+                p2.erase(p2.begin()+(i));
+                p2.erase(p2.begin()+(n_dest-1));
+            }
+            else if (i<(n_dest-1)){
+                p2.erase(p2.begin()+(n_dest-1));
+                p2.erase(p2.begin()+(i));
+            }
+        }
+    }
+
+    cout << "Now computer has " << p2.size() << " cards in hand " << endl;
+    cout << "Your deck after computer taking " << new_card << " card out: " << endl;
+    for (int i=0; i< p1.size(); i++) {
+        cout << p1[i] << " ";
+    }
+    cout << endl;
 }
