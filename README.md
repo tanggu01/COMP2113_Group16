@@ -30,11 +30,11 @@ A list of features that you plan to implement, and explain how each coding eleme
 * Function (pick_card_computer) that the computer randomly pick a card from the player and append the card to computer's deck. The function will automatically check for pairs and discard pairs from computer's deck. 
 * Function (in savegame.cpp) saves current player's and computer's deck status to each .txt file when player want to save the game. (player's deck to p1.txt, computer's deck to p2.txt). Each turn the player will be asked to save or not (requirement 4).   
 * Function (in importgame.cpp) loads the player's and computer's deck status to current game. load p1.txt file to player's vector and p2.txt file to computer's vector. The game will be automatically resumed when there are any saved file. (requirement 4)   
-*After the winner has been declared, when the player want to play the game again, the last game status stored p1.txt and p2.txt will be cleared (in main.cpp) .  
+* After the winner has been declared, when the player want to play the game again, the last game status stored p1.txt and p2.txt will be cleared (in main.cpp) .  
 * Store functions in different files (requirement 5).    
 
 
 **To run the Game**
-type: 
+type:   
   make main  
-  ./main
+./main  
