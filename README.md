@@ -32,3 +32,6 @@ A list of features that you plan to implement, and explain how each coding eleme
 * Store functions in different files (requirement 5).  
 
 
+To run the game:
+make main
+./main
