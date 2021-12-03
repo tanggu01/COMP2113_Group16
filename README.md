@@ -7,7 +7,7 @@ Jung Hyeonwoo 3035829948
 
 **Description of the Game**
 
-In this game, one player will match with one computer player. To win this game, the player should discard cards from their deck more quickly than the computer by pairing the cards. The player will receive one more additional card than the computer since the total number of cards are odd. As there is only one Joker card, it cannot be discarded. A player should wait for the computer to take a Joker card or be careful not to take a Joker card from the computer's deck. 
+In this game, one player will match with one computer player. To win this game, the player should discard cards from their deck more quickly than the computer by pairing the cards. The player will receive one more additional card than the computer since the total number of cards are odd. As there is only one Joker card, it cannot be discarded. A player should wait for the computer to take a Joker card or be careful not to take a Joker card from the computer's deck. The player wins when the player's deck becomes 0. Otherwise, when computer's deck becomes 0, the computer wins and player will lose the game. 
 
 **Game Rules**
 1. Use 52 normal cards and one Joker card for the game. Total 53 cards 
