@@ -1,7 +1,7 @@
 **C++ Project - Old Maid card game**
 
 
-**Identify a game: Old maid card game**a
+**Identify a game: Old maid card game**
 
 **Description of the Game**
 
