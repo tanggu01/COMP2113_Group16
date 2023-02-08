@@ -1,7 +1,5 @@
 **C++ Project - Old Maid card game**
 
-Kim Taehyun 3035751330
-Jung Hyeonwoo 3035829948
 
 **Identify a game: Old maid card game**a
 
@@ -33,7 +31,7 @@ A list of features that you plan to implement, and explain how each coding eleme
 * After the winner has been declared, when the player want to play the game again, the last game status stored p1.txt and p2.txt will be cleared (in main.cpp) .  
 * Store functions in different files (requirement 5).    
 
-**To run the Game the first time(including compliation): **  
+**To run the Game the first time(including compilation): **  
 * make main  
 * ./main    
   
